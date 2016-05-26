@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:layout_width="wrap_content"
+	android:background="@drawable/bg_dlg"
+	>
+
+	<TextView
+		android:layout_marginTop="15dp"
+		android:text="确定退出吗"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/dialog_texttitle"
+		android:textSize="24sp"
+		android:textColor="#000000"
+
+		/>
+	<LinearLayout
+		android:layout_below="@id/dialog_texttitle"
+		android:layout_marginTop="25dp"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:id="@+id/exit_imbut"
+		android:layout_centerHorizontal="true"	
+		>
+		
+	<Button 
+	    android:id="@+id/exit_view_dialog"
+		android:background="@drawable/xml_exit_view_dialog"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:text="确定" />
+	
+	<Button
+	    android:id="@+id/exit_view_dialog_revoked"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/xml_exit_view_dialog_revoked"
+	    android:text="消除" />
+	
+	</LinearLayout>
+	
+</RelativeLayout>

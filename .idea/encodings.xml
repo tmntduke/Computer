@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/About_Activity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/AgainActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/AnswerActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/CashActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/FailActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/FenleiActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/FillActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/ModelActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/NextActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/OrderActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/PassActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/RangeActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/RegisterActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Action/SortActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Adapter/Fenlei_Adapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Adapter/MainAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/DAO/DB_Helper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/DAO/ReleaseDataBase.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/FeildUilts/Finallay.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/MainActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/Psychological.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/PsychologicalAnswer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/Question.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/Questions.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_base_content_header.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\bg_base_content_header.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_answer_wrong_p.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\btn_answer_wrong_p.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_base_content_bottom.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\bg_base_content_bottom.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_answer_right_p.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\btn_answer_right_p.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_answerselect_p.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\btn_answerselect_p.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_answerselect_n.9.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\btn_answerselect_n.9.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_home_menu_bottom.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\bg_home_menu_bottom.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_base_header.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\bg_base_header.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_home_menu_header.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\bg_home_menu_header.png"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\demo.jpg",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-hdpi\\demo.jpg"
+    }
+]

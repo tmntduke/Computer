@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\fenlei.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\fenlei.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\main_listview.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\main_listview.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\fenlei_1.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\fenlei_1.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\fail.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\fail.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_1.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_1.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\pass.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\pass.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\fenlei_list.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\fenlei_list.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\about.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\about.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cash.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_cash.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_3.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_3.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\last_dialog.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\last_dialog.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_2.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_2.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_5.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_5.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_4.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_4.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\exit_view.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\exit_view.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\main_listview_layout.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\main_listview_layout.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\answerview.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\answerview.xml"
+    }
+]

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center"
+	    android:background="@drawable/back"
+	    android:orientation="vertical" >
+	<TextView
+	    android:id="@+id/tv16"
+	    android:layout_width="fill_parent"
+	    android:layout_height="160dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/background7"
+	    android:textColor="#000000" 
+	    android:textSize="20dp"/>
+	  <ImageView 
+		 	android:id="@+id/order_practice_imageview_tu4"
+			android:layout_width="wrap_content"
+			android:layout_height="76dip"
+			android:layout_marginBottom="10dip"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_centerHorizontal="true"
+			/>
+	
+	 <EditText
+	    android:id="@+id/et1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    android:textSize="20dp"	  
+	      ></EditText>
+	    <LinearLayout
+	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal"
+	    >   
+	    <Button
+	    android:id="@+id/btn_11"
+	    android:layout_width="150dp"
+	    android:layout_height="45dp"
+	    android:layout_marginLeft="10dp"
+	    android:background="@drawable/icon_gap_n" 
+	    android:text="提交"/>
+	    <Button
+	    android:id="@+id/btn_13"
+	    android:layout_width="150dp"
+	    android:layout_height="45dp"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/icon_gap_n" 
+	    android:text="查看答案"/>
+	    </LinearLayout>
+	<LinearLayout
+	
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	     android:orientation="horizontal"
+	 >
+	<Button
+	    android:id="@+id/btn_9" 
+	    android:layout_width="100dp"
+	    android:layout_height="45dp"
+	    android:layout_marginLeft="10dp"
+	    android:background="@drawable/icon_gap_n"
+	    android:text="上一题"/>
+	
+	<Button
+	    android:id="@+id/btn_10"
+	    android:layout_width="100dp"
+	    android:layout_height="45dp"
+	    android:background="@drawable/icon_gap_n" 
+	    android:text="下一题"/>
+	
+	
+	<Button 
+	    android:id="@+id/btn_12"
+	    android:layout_width="100dp"
+	    android:layout_height="45dp"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/icon_gap_n"
+	    android:text="提交进度"/>
+	
+	 </LinearLayout>   
+	    
+	
+	</LinearLayout>

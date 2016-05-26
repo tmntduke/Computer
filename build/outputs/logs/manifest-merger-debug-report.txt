@@ -1,0 +1,109 @@
+-- Merging decision tree log ---
+manifest
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:2:1-45:12
+	package
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:3:11-41
+	android:versionName
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:5:11-36
+		INJECTED from G:\AndroidWorkspace\Computer\AndroidManifest.xml
+		INJECTED from G:\AndroidWorkspace\Computer\AndroidManifest.xml
+	android:versionCode
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:4:11-34
+		INJECTED from G:\AndroidWorkspace\Computer\AndroidManifest.xml
+		INJECTED from G:\AndroidWorkspace\Computer\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:7:5-9:40
+	android:targetSdkVersion
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:8:9-35
+application
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:11:5-40:19
+	android:hasCode
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:13:9-31
+	android:label
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:15:9-41
+	android:permission
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:16:9-74
+	android:allowBackup
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:14:9-45
+	android:persistent
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:16:75-100
+	android:theme
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:17:9-40
+activity#com.example.computer.MainActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:18:9-25:20
+	android:label
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:20:13-45
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:19:13-61
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:21:13-24:29
+action#android.intent.action.MAIN
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:22:17-68
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:23:17-76
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:23:27-74
+activity#com.example.computer.Action.RegisterActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:26:9-80
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:26:19-78
+activity#com.example.computer.Action.RangeActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:27:9-77
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:27:19-75
+activity#com.example.computer.Action.OrderActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:28:9-67
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:28:19-55
+activity#com.example.computer.Action.About_Activity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:29:9-88
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:29:19-76
+activity#com.example.computer.Action.AgainActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:30:9-87
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:30:19-75
+activity#com.example.computer.Action.AnswerActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:31:9-88
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:31:19-76
+activity#com.example.computer.Action.CashActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:32:9-86
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:32:19-74
+activity#com.example.computer.Action.FailActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:33:9-86
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:33:19-74
+activity#com.example.computer.Action.FenleiActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:34:9-88
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:34:19-76
+activity#com.example.computer.Action.NextActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:35:9-86
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:35:19-74
+activity#com.example.computer.Action.ModelActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:36:9-87
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:36:19-75
+activity#com.example.computer.Action.SortActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:37:9-86
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:37:19-74
+activity#com.example.computer.Action.PassActivity
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:38:9-86
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:38:19-74
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:42:5-80
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:42:22-78

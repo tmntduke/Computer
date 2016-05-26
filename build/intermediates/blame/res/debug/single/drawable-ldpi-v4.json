@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\demo.jpg",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-ldpi\\demo.jpg"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\drawable-ldpi\\ic_launcher.png"
+    }
+]
