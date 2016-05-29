@@ -74,20 +74,7 @@
         android:gravity="center"
         android:orientation="horizontal"
     >
-        <Button
-            android:id="@+id/btn_1"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/icon_gap_n"
-            android:text="上一题"/>
 
-        <Button
-            android:id="@+id/btn_2"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="@drawable/icon_gap_n"
-            android:text="下一题"/>
 
         <Button
             android:id="@+id/btn_3"

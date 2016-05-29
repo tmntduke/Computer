@@ -1,6 +1,7 @@
 package com.example.computer.DAO;
 
 import java.util.ArrayList;
+import java.util.Timer;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -18,16 +19,16 @@ public class DB_Helper {
     private ReleaseDataBase releasedatabase ;
 	
 	public DB_Helper(Context context) {
-		super();
 		this.context = context;
+		releasedatabase= new ReleaseDataBase(context);
+		releasedatabase.OpenDataBase();
+		db = SQLiteDatabase.openOrCreateDatabase(Finallay.FILE_PATH, null);
 	}
 
 	// 开启连接
 	public void openConn() {
 		if (db == null) {
-			releasedatabase= new ReleaseDataBase(context);
-			releasedatabase.OpenDataBase();
-			db = SQLiteDatabase.openOrCreateDatabase(Finallay.FILE_PATH, null);
+
 
 		}
 	}
@@ -277,6 +278,7 @@ public class DB_Helper {
 	 * @param password
 	 */
 	public void add(String user,String password){
+
         db2=releasedatabase.getWritableDatabase();
         ContentValues values=new ContentValues();
         values.put("username",user);
@@ -300,5 +302,7 @@ public class DB_Helper {
             return false;
         }
     }
+
+
 
 }

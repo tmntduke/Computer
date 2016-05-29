@@ -54,7 +54,7 @@ public class RangeActivity extends FragmentActivity {
 
                 //QuestionsIndex=readQuestionIndex();
                 FragmentManager manager = getSupportFragmentManager();
-                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList, 1);
+                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList,  flag);
                 adapter.notifyDataSetChanged();
                 mViewPager.setAdapter(adapter);
             }
@@ -93,17 +93,6 @@ public class RangeActivity extends FragmentActivity {
         }).start();
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {//返回按键
-        // TODO Auto-generated method stub
 
-        if (keyCode == KeyEvent.KEYCODE_BACK
-                || keyCode == KeyEvent.KEYCODE_HOME) {
-            Intent intent = new Intent(RangeActivity.this, NextActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 
 }

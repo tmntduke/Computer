@@ -36,18 +36,23 @@ public class RegisterActivity extends Activity {
     private Spinner spinner;
     private CheckBox savle;
     private SharedPreferences per;
-    public static String USER="user";
-    public static String PASS="pass";
+    public static String USER = "user";
+    public static String PASS = "pass";
     private static final int RESULT_CODE = 0;
+    private DB_Helper helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        helper = new DB_Helper(getApplicationContext());
+        helper.openConn();
+
         user = (EditText) findViewById(R.id.user);
         pass = (EditText) findViewById(R.id.pass);
         sPass = (EditText) findViewById(R.id.checkPass);
-       
+
         zhuCe = (Button) findViewById(R.id.zhuce);
         zhuCe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,30 +66,22 @@ public class RegisterActivity extends Activity {
                 } else if (!sPass.getText().toString().equals(pass.getText().toString())) {
                     // tiShi("密码不一致");
                     sPass.setError("密码不一致");
-                } 
-
-                   
-                    //tiShi(person.toString());
-                    ReleaseDataBase releaseDataBase  = new ReleaseDataBase(getApplicationContext());
-  
-                    DB_Helper helper=new DB_Helper(getApplicationContext());
-                    helper.openConn();
+                } else {
                     helper.add(user.getText().toString(), pass.getText().toString());
-                    Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
-//                    intent.putExtra("", "注册成功");
-//                    intent.putExtra("salve", true);
-//                    per=getSharedPreferences("zhuCe",MODE_PRIVATE);
-//                    SharedPreferences.Editor editor=per.edit();
-//                    editor.putString(USER,user.getText().toString());
-//                    editor.putString(PASS,pass.getText().toString());
-//                    //editor.putBoolean("salve",true);
-//                    editor.commit();
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+
                     startActivity(intent);
                     finish();
                 }
 
 
-           
+                //tiShi(person.toString());
+                ReleaseDataBase releaseDataBase = new ReleaseDataBase(getApplicationContext());
+
+
+            }
+
+
         });
         tuiChu = (Button) findViewById(R.id.exitMain);
         tuiChu.setOnClickListener(new View.OnClickListener() {
@@ -94,9 +91,9 @@ public class RegisterActivity extends Activity {
             }
         });
 
-      
-           fanHui=(Button) findViewById(R.id.returnMain);
-           fanHui.setOnClickListener(new View.OnClickListener() {
+
+        fanHui = (Button) findViewById(R.id.returnMain);
+        fanHui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
@@ -105,11 +102,7 @@ public class RegisterActivity extends Activity {
             }
         });
 
-       
-      
-        
 
-      
     }
 
     public void tiShi(String string) {

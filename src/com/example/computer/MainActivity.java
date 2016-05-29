@@ -8,17 +8,19 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.computer.R;
+
 import com.example.computer.Action.NextActivity;
 import com.example.computer.Action.RegisterActivity;
 import com.example.computer.DAO.DB_Helper;
 import com.example.computer.Utilts.Utils;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 登陆界面
@@ -59,26 +61,29 @@ public class MainActivity extends Activity implements OnClickListener {
                 startActivity(intent);
             }
         });
+
         helper = new DB_Helper(getApplicationContext());
         helper.openConn();
+
     }
 
-    @Override
-    public void onClick(View v) {
+        @Override
+        public void onClick (View v){
 
-        if (v.getId() == R.id.btn1) {
-            if (helper.query(editText1.getText().toString(), editText2.getText().toString())) {
-                Intent intent1 = new Intent(MainActivity.this, NextActivity.class);
-                Utils.showToast(MainActivity.this, "登陆成功");
-                startActivity(intent1);
-            } else {
-                editText1.setText("");
-                editText2.setText("");
-                Utils.showToast(MainActivity.this, "用户名或密码错误");
+            if (v.getId() == R.id.btn1) {
+                if (helper.query(editText1.getText().toString(), editText2.getText().toString())) {
+                    Intent intent1 = new Intent(MainActivity.this, NextActivity.class);
+                    Utils.showToast(MainActivity.this, "登陆成功");
+                    startActivity(intent1);
+                } else {
+                    editText1.setText("");
+                    editText2.setText("");
+                    Utils.showToast(MainActivity.this, "用户名或密码错误");
+                }
             }
+
         }
 
-    }
 
 
     @Override

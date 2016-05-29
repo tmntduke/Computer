@@ -104,14 +104,14 @@ public class FenleiActivity extends Activity implements  OnClickListener{
 		imageView = (ImageView) findViewById(R.id.order_practice_imageview_tu11);
 		if (null != arrayList.get(QuestionsIndex).getBlob()) {// 如果有图片
 			
-			imageView.setVisibility(0);
+			imageView.setVisibility(View.GONE);
 			Bitmap bitmap = BitmapFactory.decodeByteArray(
 					arrayList.get(QuestionsIndex).getBlob(), 0,
 					arrayList.get(QuestionsIndex).getBlob().length);
 			System.out.println(bitmap);
 			imageView.setImageBitmap(bitmap);
 		} else {
-			imageView.setVisibility(8);// 如果没有则控件隐藏
+			imageView.setVisibility(View.GONE);// 如果没有则控件隐藏
 		}
 		tv1 = (TextView) findViewById(R.id.tv111);
 		tv1.setText(QuestionsIndex+arrayList.get(QuestionsIndex).getQuestion());
@@ -123,18 +123,18 @@ public class FenleiActivity extends Activity implements  OnClickListener{
 		tv4 = (TextView) findViewById(R.id.tv114);
 		if(arrayList.get(QuestionsIndex).getOptionC() .equals("null")){
 
-		tv4.setVisibility(8);
+		tv4.setVisibility(View.GONE);
 		}else{
 	    tv4.setText(arrayList.get(QuestionsIndex).getOptionC());
-	    tv4.setVisibility(0);
+	    tv4.setVisibility(View.GONE);
 		}
 		tv5 = (TextView) findViewById(R.id.tv115);
 		if(arrayList.get(QuestionsIndex).getOptionD().equals("null")){
 		
-		tv5.setVisibility(8);
+		tv5.setVisibility(View.GONE);
 		}else{
 		tv5.setText(arrayList.get(QuestionsIndex).getOptionD());
-		tv5.setVisibility(0);
+		tv5.setVisibility(View.GONE);
 		}
 		btn1 = (Button) findViewById(R.id.btn_111);
 		btn2 = (Button) findViewById(R.id.btn_211);
@@ -184,7 +184,7 @@ public class FenleiActivity extends Activity implements  OnClickListener{
 				Log.e("", QuestionsIndex+"");
 			}else{
 				QuestionsIndex  = arrayList.size()-1;
-				Toast.makeText(FenleiActivity.this, "已到最后一题", 200).show();
+				Toast.makeText(FenleiActivity.this, "已到最后一题", Toast.LENGTH_SHORT).show();
 			}
           init();
 		}

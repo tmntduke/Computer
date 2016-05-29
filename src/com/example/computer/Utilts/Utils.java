@@ -45,9 +45,14 @@ public class Utils {
                     Random random = new Random();
                     int p = random.nextInt(150);
                     //Log.i(TAG, "getItem: " + i + p);
-                    return AnswerFragment.newInstance(list, i + p, list.get(i + p).getMexam_type());
+                    return AnswerFragment.newInstance(list, i + p, list.get(i + p).getMexam_type(), flag);
+                } else if (flag == 2) {
+                    Random random = new Random();
+                    int p = random.nextInt(30);
+                    //Log.i(TAG, "getItem: " + i + p);
+                    return AnswerFragment.newInstance(list, i+1, list.get(i + p).getMexam_type(), flag);
                 } else {
-                    return AnswerFragment.newInstance(list, i, list.get(i).getMexam_type());
+                    return AnswerFragment.newInstance(list, i, list.get(i).getMexam_type(), flag);
                 }
 
             }
@@ -60,6 +65,5 @@ public class Utils {
 
         return adapter;
     }
-
 
 }

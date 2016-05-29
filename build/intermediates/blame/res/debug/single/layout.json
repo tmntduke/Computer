@@ -36,12 +36,12 @@
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\about.xml"
     },
     {
-        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cash.xml",
-        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_cash.xml"
-    },
-    {
         "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_3.xml",
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_3.xml"
+    },
+    {
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cash.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_cash.xml"
     },
     {
         "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\last_dialog.xml",

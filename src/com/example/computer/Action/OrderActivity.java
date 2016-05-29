@@ -76,7 +76,7 @@ public class OrderActivity extends FragmentActivity {
 
                 //QuestionsIndex=readQuestionIndex();
                 FragmentManager manager = getSupportFragmentManager();
-                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList,0);
+                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList,flag);
                 adapter.notifyDataSetChanged();
                 mViewPager.setAdapter(adapter);
             }
