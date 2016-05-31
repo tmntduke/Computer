@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.computer.Action.AgainActivity;
 import com.example.computer.DAO.DB_Helper;
@@ -33,6 +34,10 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
     public static final String POTISION = "potision";
     public static final String TYPE = "type";
     public static final String KIND = "kind";
+
+
+    private boolean a1, a2, a3, a4;
+
     @InjectView(R.id.tv1)
     TextView mTv1;
     @InjectView(R.id.tv2)
@@ -55,6 +60,8 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
 
     private ArrayList<Questions> wrongCount;
 
+    private static boolean isClickItem = true;
+
     private int answer;
     private DB_Helper db_Hleper;
 
@@ -68,8 +75,9 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
         position = getArguments().getInt(POTISION);
         kind = getArguments().getInt(KIND);
 
-        wrongCount = new ArrayList<>();
+
         //Log.i(TAG, "onCreate: " + type);
+        db_Hleper = new DB_Helper(getActivity());
     }
 
     @Override
@@ -78,7 +86,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
         ButterKnife.inject(this, view);
 
         if (kind == 2) {
-            mCount.setText(position + "/" + "20");
+            mCount.setText((position + 1) + "/" + "20");
         } else {
             mCount.setText(mQuestionses.get(position).get_id() + "/" + mQuestionses.size());
         }
@@ -101,17 +109,16 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
 
         if (kind != 2) {
             mBtn3.setVisibility(View.GONE);
-        } else if (kind == 2 && position == 20) {
+        } else if (kind == 2 && position == 19) {
 
             mBtn3.setOnClickListener((v) -> {
+                wrongCount = db_Hleper.queryAllWrong();
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("hint");
                 builder.setMessage("wrong:  " + wrongCount.size() + "   turn to other view");
+                Log.i(TAG, "onCreateView: " + wrongCount.size());
                 builder.setPositiveButton("yes", ((dialog1, which) -> {
                     Intent intent = new Intent(getActivity(), AgainActivity.class);
-
-                    intent.putExtra("who", 001);
-                    intent.putExtra("wrong", wrongCount);
                     startActivity(intent);
                     getActivity().finish();
                 }));
@@ -119,7 +126,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
                 dialog.show();
             });
 
-        } else if (kind == 2 && position != 20) {
+        } else if (kind == 2 && position != 19) {
             mBtn3.setVisibility(View.GONE);
         }
 
@@ -132,19 +139,37 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
      * @param useranswer 用户的答案
      */
     public void show(int useranswer) {
-        if (mQuestionses.get(position).getAnswer() == useranswer) {
 
+        SharedPreferences.Editor editor = getActivity().getSharedPreferences("clickItem", Context.MODE_PRIVATE).edit();
+
+
+        if (kind != 2 && mQuestionses.get(position).getAnswer() == useranswer) {
+            isClickItem = false;
             Utils.showToast(getActivity(), "right");
         } else if (kind != 2 && (mQuestionses.get(position).getAnswer() != useranswer)) {
+            isClickItem = false;
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle("hint");
             builder.setMessage("answer is " + getAnswer(mQuestionses.get(position).getAnswer()));
             AlertDialog dialog = builder.create();
             dialog.show();
-        } else if (kind == 2 && (mQuestionses.get(position).getAnswer() != useranswer)) {
-            wrongCount.add(mQuestionses.get(position));
+        } else if (kind == 2 && (mQuestionses.get(position).getAnswer() != useranswer) && !a1 && !a2 && !a3 && !a4) {
+            isClickItem = false;
+            Log.i(TAG, "show: " + mQuestionses.get(position));
+            //wrongCount.add(mQuestionses.get(position));
+            db_Hleper.addWrong(mQuestionses.get(position));
+        } else if (kind == 2 && (mQuestionses.get(position).getAnswer() == useranswer)) {
+            isClickItem = false;
         }
+
+        editor.putBoolean("click", isClickItem);
+        editor.commit();
     }
+
+    public boolean isClickItem() {
+        return isClickItem;
+    }
+
 
     /**
      * 创建fragment实例
@@ -176,20 +201,70 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv2:
-                show(1);
+
+                isClickOtherAnswer(mTv2, !a1 && !a2 && !a3 && !a4, 1);
+                a1 = true;
+
+//                if (!a1 && !a2 && !a3 && !a4) {
+//                    changeBackground(mTv2);
+//                    show(1);
+//                    a1 = true;
+//                } else {
+//                    Utils.showToast(getActivity(), "you already click other answer");
+//                }
+
                 break;
             case R.id.tv3:
-                show(2);
+                isClickOtherAnswer(mTv3, !a1 & !a2 && !a3 && !a4, 2);
+                a2 = true;
+//                if (!a1 & !a2 && !a3 && !a4) {
+//                    changeBackground(mTv3);
+//                    show(2);
+//                    a2 = true;
+//                } else {
+//                    Utils.showToast(getActivity(), "you already click other answer");
+//                }
+
                 break;
             case R.id.tv4:
-                show(3);
+                isClickOtherAnswer(mTv4, !a1 & !a2 && !a3 && !a4, 3);
+                a3 = true;
+
+//                changeBackground(mTv4);
+//                show(3);
                 break;
             case R.id.tv5:
-                show(4);
+                isClickOtherAnswer(mTv5, !a1 & !a2 && !a3 && !a4, 4);
+                a4 = true;
+//                changeBackground(mTv5);
+//                show(4);
                 break;
 
             case R.id.btn_3:
                 break;
+        }
+    }
+
+    /**
+     * 判断是否点击了其他的按钮 并改变点击的选项
+     *
+     * @param v
+     * @param isClickItem
+     * @param f
+     */
+    public void isClickOtherAnswer(View v, boolean isClickItem, int f) {
+        if (isClickItem) {
+            changeBackground(v);
+            show(f);
+
+        } else {
+            Utils.showToast(getActivity(), "you already click other answer");
+        }
+    }
+
+    public void changeBackground(View v) {
+        if (kind == 2) {
+            v.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         }
     }
 

@@ -63,20 +63,20 @@ public class AgainActivity extends FragmentActivity {
     private ViewPager mViewPager;
     private ArrayList<Questions> wrongs;
 
-//    public Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            if (msg.what == 0) {
-//                arrayList = (ArrayList<Questions>) msg.obj;
-//
-//                //QuestionsIndex=readQuestionIndex();
-//                FragmentManager manager = getSupportFragmentManager();
-//                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList, flag);
-//                adapter.notifyDataSetChanged();
-//                mViewPager.setAdapter(adapter);
-//            }
-//        }
-//    };
+    public Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 0) {
+                arrayList = (ArrayList<Questions>) msg.obj;
+
+                //QuestionsIndex=readQuestionIndex();
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList, flag);
+                adapter.notifyDataSetChanged();
+                mViewPager.setAdapter(adapter);
+            }
+        }
+    };
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +84,7 @@ public class AgainActivity extends FragmentActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         db_Hleper = new DB_Helper(this);// new锟斤拷sqlite
-        arrayList = new ArrayList<Questions>();
+        arrayList = new ArrayList<>();
         //锟斤拷锟斤拷全锟斤拷
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.ViewPager);
@@ -92,30 +92,28 @@ public class AgainActivity extends FragmentActivity {
 
         intent = getIntent();
         flag = intent.getIntExtra("flag", -1);
-        if (intent != null && intent.getIntExtra("who", 0) == 001) {
-            wrongs = (ArrayList<Questions>) intent.getSerializableExtra("wrong");
-        }
-
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, wrongs, flag);
-        adapter.notifyDataSetChanged();
-        mViewPager.setAdapter(adapter);
 
 
-//        new Thread(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                // TODO Auto-generated method stub
-//                List<Questions> list = new ArrayList<Questions>();
-//                list = db_Hleper.queryAll();
-//                Message message = Message.obtain();
-//                message.what = 0;
-//                message.obj = list;
-//                handler.sendMessage(message);
-//
-//            }
-//        }).start();
+//        FragmentManager manager = getSupportFragmentManager();
+//        FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, arrayList, flag);
+//        adapter.notifyDataSetChanged();
+//        mViewPager.setAdapter(adapter);
+
+
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                List<Questions> list = new ArrayList<Questions>();
+                list = db_Hleper.queryAllWrong();
+                Message message = Message.obtain();
+                message.what = 0;
+                message.obj = list;
+                handler.sendMessage(message);
+
+            }
+        }).start();
     }
 
 
