@@ -77,7 +77,7 @@ public class ModelActivity extends FragmentActivity {
                 Log.i(TAG, "handleMessage: " + turn.size());
                 //QuestionsIndex=readQuestionIndex();
                 FragmentManager manager = getSupportFragmentManager();
-                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager, turn, flag);
+                FragmentStatePagerAdapter adapter = Utils.getFragmentAdater(manager,turn, flag);
                 adapter.notifyDataSetChanged();
                 mViewPager.setAdapter(adapter);
 

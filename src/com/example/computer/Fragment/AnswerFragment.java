@@ -2,7 +2,6 @@ package com.example.computer.Fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.BitmapDrawable;
@@ -14,10 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.computer.Action.AgainActivity;
 import com.example.computer.DAO.DB_Helper;
+import com.example.computer.Model.AnotherAnswer;
 import com.example.computer.Model.Questions;
 import com.example.computer.R;
 import com.example.computer.Utilts.Utils;
@@ -34,6 +33,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
     public static final String POTISION = "potision";
     public static final String TYPE = "type";
     public static final String KIND = "kind";
+    public static final String ANOTHER = "another";
 
 
     private boolean a1, a2, a3, a4;
@@ -72,6 +72,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         type = getArguments().getInt(TYPE);
         mQuestionses = (ArrayList<Questions>) getArguments().getSerializable(ANSWER);
+
         position = getArguments().getInt(POTISION);
         kind = getArguments().getInt(KIND);
 
@@ -82,52 +83,58 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.next_1_1, container, false);
-        ButterKnife.inject(this, view);
-
-        if (kind == 2) {
-            mCount.setText((position + 1) + "/" + "20");
+        View view = null;
+        if (mQuestionses.size() == 0) {
+            view = inflater.inflate(R.layout.null_lay, container);
         } else {
-            mCount.setText(mQuestionses.get(position).get_id() + "/" + mQuestionses.size());
-        }
 
-        mTv1.setText(mQuestionses.get(position).getQuestion());
-        BitmapDrawable drawable = new BitmapDrawable(Utils.readBitMap(getActivity(), R.drawable.background7));
-        mTv1.setBackground(drawable);
+            view = inflater.inflate(R.layout.next_1_1, container, false);
+            ButterKnife.inject(this, view);
 
-        mTv2.setText(mQuestionses.get(position).getOptionA());
-        mTv3.setText(mQuestionses.get(position).getOptionB());
-        if (type == 1) {
+            if (kind == 2) {
+                mCount.setText((position + 1) + "/" + "20");
+            } else {
+                mCount.setText(mQuestionses.get(position).get_id() + "/" + mQuestionses.size());
+            }
 
-            mTv4.setText(mQuestionses.get(position).getOptionC());
-            mTv5.setText(mQuestionses.get(position).getOptionD());
+            mTv1.setText(mQuestionses.get(position).getQuestion());
+            BitmapDrawable drawable = new BitmapDrawable(Utils.readBitMap(getActivity(), R.drawable.background7));
+            mTv1.setBackground(drawable);
 
-        } else if (type == 0) {
-            mTv4.setVisibility(View.GONE);
-            mTv5.setVisibility(View.GONE);
-        }
+            mTv2.setText(mQuestionses.get(position).getOptionA());
+            mTv3.setText(mQuestionses.get(position).getOptionB());
+            if (type == 1) {
 
-        if (kind != 2) {
-            mBtn3.setVisibility(View.GONE);
-        } else if (kind == 2 && position == 19) {
+                mTv4.setText(mQuestionses.get(position).getOptionC());
+                mTv5.setText(mQuestionses.get(position).getOptionD());
 
-            mBtn3.setOnClickListener((v) -> {
-                wrongCount = db_Hleper.queryAllWrong();
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("hint");
-                builder.setMessage("wrong:  " + wrongCount.size() + "   turn to other view");
-                Log.i(TAG, "onCreateView: " + wrongCount.size());
-                builder.setPositiveButton("yes", ((dialog1, which) -> {
-                    Intent intent = new Intent(getActivity(), AgainActivity.class);
-                    startActivity(intent);
-                    getActivity().finish();
-                }));
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            });
+            } else if (type == 0) {
+                mTv4.setVisibility(View.GONE);
+                mTv5.setVisibility(View.GONE);
+            }
 
-        } else if (kind == 2 && position != 19) {
-            mBtn3.setVisibility(View.GONE);
+            if (kind != 2) {
+                mBtn3.setVisibility(View.GONE);
+            } else if (kind == 2 && position == 19) {
+
+                mBtn3.setOnClickListener((v) -> {
+                    wrongCount = db_Hleper.queryAllWrong();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    builder.setTitle("hint");
+                    builder.setMessage("wrong:  " + wrongCount.size() + "   turn to other view");
+                    Log.i(TAG, "onCreateView: " + wrongCount.size());
+                    builder.setPositiveButton("yes", ((dialog1, which) -> {
+                        Intent intent = new Intent(getActivity(), AgainActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }));
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                });
+
+            } else if (kind == 2 && position != 19) {
+                mBtn3.setVisibility(View.GONE);
+            }
         }
 
         return view;
@@ -181,10 +188,13 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
      */
     public static AnswerFragment newInstance(ArrayList<Questions> questionses, int position, int type, int questionKind) {
         Bundle bundle = new Bundle();
-        bundle.putSerializable(ANSWER, questionses);
+
         bundle.putSerializable(POTISION, position);
         bundle.putSerializable(TYPE, type);
         bundle.putSerializable(KIND, questionKind);
+
+        bundle.putSerializable(ANSWER, questionses);
+
         AnswerFragment fragmentCrime = new AnswerFragment();
         fragmentCrime.setArguments(bundle);
         return fragmentCrime;

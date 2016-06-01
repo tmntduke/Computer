@@ -8,10 +8,10 @@ import butterknife.ButterKnife.Injector;
 public class AnswerFragment$$ViewInjector<T extends com.example.computer.Fragment.AnswerFragment> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131165233, "field 'mTv1'");
-    target.mTv1 = finder.castView(view, 2131165233, "field 'mTv1'");
-    view = finder.findRequiredView(source, 2131165234, "field 'mTv2' and method 'onClick'");
-    target.mTv2 = finder.castView(view, 2131165234, "field 'mTv2'");
+    view = finder.findRequiredView(source, 2131165234, "field 'mTv1'");
+    target.mTv1 = finder.castView(view, 2131165234, "field 'mTv1'");
+    view = finder.findRequiredView(source, 2131165235, "field 'mTv2' and method 'onClick'");
+    target.mTv2 = finder.castView(view, 2131165235, "field 'mTv2'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +20,8 @@ public class AnswerFragment$$ViewInjector<T extends com.example.computer.Fragmen
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131165235, "field 'mTv3' and method 'onClick'");
-    target.mTv3 = finder.castView(view, 2131165235, "field 'mTv3'");
+    view = finder.findRequiredView(source, 2131165236, "field 'mTv3' and method 'onClick'");
+    target.mTv3 = finder.castView(view, 2131165236, "field 'mTv3'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,8 +30,8 @@ public class AnswerFragment$$ViewInjector<T extends com.example.computer.Fragmen
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131165236, "field 'mTv4' and method 'onClick'");
-    target.mTv4 = finder.castView(view, 2131165236, "field 'mTv4'");
+    view = finder.findRequiredView(source, 2131165237, "field 'mTv4' and method 'onClick'");
+    target.mTv4 = finder.castView(view, 2131165237, "field 'mTv4'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -40,8 +40,8 @@ public class AnswerFragment$$ViewInjector<T extends com.example.computer.Fragmen
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131165237, "field 'mTv5' and method 'onClick'");
-    target.mTv5 = finder.castView(view, 2131165237, "field 'mTv5'");
+    view = finder.findRequiredView(source, 2131165238, "field 'mTv5' and method 'onClick'");
+    target.mTv5 = finder.castView(view, 2131165238, "field 'mTv5'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -50,8 +50,8 @@ public class AnswerFragment$$ViewInjector<T extends com.example.computer.Fragmen
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131165238, "field 'mBtn3' and method 'onClick'");
-    target.mBtn3 = finder.castView(view, 2131165238, "field 'mBtn3'");
+    view = finder.findRequiredView(source, 2131165239, "field 'mBtn3' and method 'onClick'");
+    target.mBtn3 = finder.castView(view, 2131165239, "field 'mBtn3'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -60,8 +60,8 @@ public class AnswerFragment$$ViewInjector<T extends com.example.computer.Fragmen
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131165232, "field 'mCount'");
-    target.mCount = finder.castView(view, 2131165232, "field 'mCount'");
+    view = finder.findRequiredView(source, 2131165233, "field 'mCount'");
+    target.mCount = finder.castView(view, 2131165233, "field 'mCount'");
   }
 
   @Override public void reset(T target) {

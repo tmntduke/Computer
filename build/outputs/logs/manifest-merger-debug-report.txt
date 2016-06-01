@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:2:1-44:12
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:3:11-41
 	android:versionName
@@ -26,7 +26,7 @@ ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:11:5-39:19
 	android:allowBackup
 		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:13:9-45
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:13:9-46
 	android:theme
 		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:15:9-40
 activity#com.example.computer.MainActivity
@@ -101,3 +101,23 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:41:5-80
 	android:name
 		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:41:22-78
+uses-permission#android.permission.INTERNET
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:42:5-67
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:42:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:43:5-79
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:43:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:44:5-76
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:44:22-73
+uses-permission#android.permission.WAKE_LOCK
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:45:5-68
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:45:22-65
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:47:5-75
+	android:name
+		ADDED from G:\AndroidWorkspace\Computer\AndroidManifest.xml:47:22-72

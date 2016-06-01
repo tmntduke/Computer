@@ -2,32 +2,11 @@
 <items version="2" >
 
     <item
-        jar="G:\AndroidWorkspace\Computer\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="1d4d5c4beb4c0a49743b86045360adfebe3e720d">
-        <dex dex="G:\AndroidWorkspace\Computer\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2937c6fd422c09aceb2aa9150b2f3130702c7dec\classes.dex" />
-    </item>
-    <item
         jar="G:\AndroidWorkspace\Computer\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="f793dd1362577671f8fb371c3e7fd9904700ed73">
+        sha1="7a4f92bd9caf10ec730ff174de34c86a8f0e39d6">
         <dex dex="G:\AndroidWorkspace\Computer\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_02d633fa3a5ac9c1b1a8c5dd362faf2d6b6d8936\classes.dex" />
-    </item>
-    <item
-        jar="G:\AndroidWorkspace\Computer\libs\android-support-v4.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="5896b0a4e377ac4242eb2bc785220c1c4fc052f4">
-        <dex dex="G:\AndroidWorkspace\Computer\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_b12e439c67f4d4c28faf7ca9a1863b6135c47bf0\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\tmnt\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
-        <dex dex="G:\AndroidWorkspace\Computer\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-6.1.0_23ee34a32e8afe2ac8ea2970831798519b0d3c78\classes.dex" />
     </item>
 
 </items>

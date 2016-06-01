@@ -1,9 +1,12 @@
 package com.example.computer;
 
 
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -12,6 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 
 import com.example.computer.Action.NextActivity;
@@ -41,6 +45,7 @@ public class MainActivity extends Activity implements OnClickListener {
      * Called when the activity is first created.
      */
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +56,10 @@ public class MainActivity extends Activity implements OnClickListener {
         editText1 = (EditText) findViewById(R.id.editText1);
         editText2 = (EditText) findViewById(R.id.editText2);
 
+
         btn2 = (Button) findViewById(R.id.register);
         btn2.setOnClickListener(new OnClickListener() {
+
 
             @Override
             public void onClick(View arg0) {
@@ -67,23 +74,22 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
 
-        @Override
-        public void onClick (View v){
+    @Override
+    public void onClick(View v) {
 
-            if (v.getId() == R.id.btn1) {
-                if (helper.query(editText1.getText().toString(), editText2.getText().toString())) {
-                    Intent intent1 = new Intent(MainActivity.this, NextActivity.class);
-                    Utils.showToast(MainActivity.this, "登陆成功");
-                    startActivity(intent1);
-                } else {
-                    editText1.setText("");
-                    editText2.setText("");
-                    Utils.showToast(MainActivity.this, "用户名或密码错误");
-                }
+        if (v.getId() == R.id.btn1) {
+            if (helper.query(editText1.getText().toString(), editText2.getText().toString())) {
+                Intent intent1 = new Intent(MainActivity.this, NextActivity.class);
+                Utils.showToast(MainActivity.this, "登陆成功");
+                startActivity(intent1);
+            } else {
+                editText1.setText("");
+                editText2.setText("");
+                Utils.showToast(MainActivity.this, "用户名或密码错误");
             }
-
         }
 
+    }
 
 
     @Override

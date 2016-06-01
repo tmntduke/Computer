@@ -36,10 +36,6 @@
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\about.xml"
     },
     {
-        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_3.xml",
-        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_3.xml"
-    },
-    {
         "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cash.xml",
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_cash.xml"
     },
@@ -48,24 +44,16 @@
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\last_dialog.xml"
     },
     {
-        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_2.xml",
-        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_2.xml"
-    },
-    {
         "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_5.xml",
-        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_5.xml"
+        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\null_lay.xml",
+        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\null_lay.xml"
     },
     {
         "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next.xml",
         "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next.xml"
-    },
-    {
-        "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\next_1_4.xml",
-        "source": "G:\\AndroidWorkspace\\Computer\\res\\layout\\next_1_4.xml"
     },
     {
         "merged": "G:\\AndroidWorkspace\\Computer\\build\\intermediates\\res\\merged\\debug\\layout\\exit_view.xml",

@@ -19,11 +19,16 @@
     <file url="file://$PROJECT_DIR$/src/com/example/computer/DAO/DB_Helper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/DAO/ReleaseDataBase.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/FeildUilts/Finallay.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Fragment/AnotherFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Fragment/AnswerFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/MainActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/AnotherAnswer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/Psychological.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/PsychologicalAnswer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/Question.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/computer/Model/Questions.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Utilts/Constants.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/computer/Utilts/Utils.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

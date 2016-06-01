@@ -1,8 +1,14 @@
 package com.example.computer.Utilts;
 
+import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -10,6 +16,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.computer.Fragment.AnswerFragment;
+import com.example.computer.Model.AnotherAnswer;
 import com.example.computer.Model.Questions;
 
 import java.io.InputStream;
@@ -59,11 +66,88 @@ public class Utils {
 
             @Override
             public int getCount() {
-                return list.size();
+                {
+                    return list.size();
+                }
+
             }
         };
 
         return adapter;
     }
 
+    /**
+     * 判断网络是否连接
+     *
+     * @param context
+     * @return
+     */
+    public static boolean isConnected(Context context) {
+
+        ConnectivityManager connectivity = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (null != connectivity) {
+
+            NetworkInfo info = connectivity.getActiveNetworkInfo();
+            if (null != info && info.isConnected()) {
+                if (info.getState() == NetworkInfo.State.CONNECTED) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 判断是否是wifi连接
+     */
+    public static boolean isWifiConnected(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifiNetworkInfo = connectivityManager
+                .getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifiNetworkInfo.isConnected()) {
+            return true;
+        }
+        return false;
+    }
+
+
+    public static int getNetWorkStatus(Context context) {
+        int netWorkType = Constants.NETWORK_CLASS_UNKNOWN;
+        ConnectivityManager connectivityManager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            int type = networkInfo.getType();
+            if (type == ConnectivityManager.TYPE_WIFI) {
+                netWorkType = Constants.NETWORK_WIFI;
+            } else if (type == ConnectivityManager.TYPE_MOBILE) {
+                netWorkType = Constants.getNetWorkClass(context);
+            }
+        }
+        return netWorkType;
+    }
+
+    /**
+     * 打开网络设置界面
+     */
+    public static void openSetting(Context context) {
+
+        Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
+        context.startActivity(intent);
+    }
+
+    public static boolean isMobileConnected(Context context) {
+
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo mMobileNetworkInfo = mConnectivityManager
+                .getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        return mMobileNetworkInfo.isAvailable();
+
+
+    }
 }
